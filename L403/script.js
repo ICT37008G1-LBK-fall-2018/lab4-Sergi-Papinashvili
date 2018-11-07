@@ -4,15 +4,14 @@ function getDiff(students) {
    
     let list = [students[0].name]; 
     for (let i = 0; i < students.length; i++) {
-        for(let k = 0; k<list.length; k++)
-       {
-        if (students[i].name!==list[k].name) {
-        
-            list.push(students[i].name);
-        }
+       if(list.indexOf(students[i].name) == -1) {
+             list.push(students[i].name);
        }
     
     }
+
+
+
     return list;
 }
 
